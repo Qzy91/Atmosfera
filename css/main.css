@@ -7654,6 +7654,7 @@ input:hover, input:focus {
 
 .pages {
   height: auto;
+  max-height: 100vh;
   padding-bottom: 120px; }
   .pages__btn {
     text-align: right;

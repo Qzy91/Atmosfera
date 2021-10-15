@@ -21382,14 +21382,25 @@ const tooltip = document.querySelector('.tooltip');
 const tooltipText = document.querySelector('.tooltip__text');
 const mapWraper = document.querySelector('.map_wraper');
 const service = document.querySelectorAll('.service');
+const mainSection = document.querySelector('.main');
+const nextPage = false;
 
+const clicknextPage = function(){
+	nextPage=true;
+	console.log(nextPage);
+};
+window.document.documentElement.scrollTop = mainSection.clientHeight;
+// console.log(mainSection.style.clientHeight);
 service.forEach(serv => {
 	serv.addEventListener('click', function(){
 		alert(this.dataset.title);
-	})
+	});
+
+
 	serv.addEventListener('mousemove', function(e){
+		// console.log(document.documentElement.scrollTop)
 		tooltipText.innerText = this.dataset.title;
-		tooltip.style.top = (e.y +20) + 'px';
+		tooltip.style.top = (e.y +20 + window.pageYOffset) + 'px';
 		tooltip.style.left = (e.x + 5) + 'px';
 		tooltip.style.opacity = 0.95;
 	});
