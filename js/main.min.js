@@ -21487,7 +21487,7 @@ if (exampleMain != null){
 const [...arrExamples] = document.querySelectorAll('.examples__flex__item')
 for (let example of arrExamples) {
 	example.onclick = () => {
-		window.location.href = `/portfolio.html`
+		window.location.href = `./portfolio.html`
 	}
 }
 
@@ -21507,16 +21507,21 @@ const Pages = document.querySelectorAll('.page');
 const pageSection = document.querySelector('.pages');
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     Pages.forEach( pageStart =>{
-// 		if (pageStart.classList.contains('pages__active')) {
-// 			pageSection.style.height = getComputedStyle(pageStart).height;
-// 			console.log(getComputedStyle(pageStart).height);
-// 			console.log(pageStart);
-// 		}
-// 	})
+document.addEventListener("DOMContentLoaded", () => {
+    Pages.forEach( pageStart =>{
+		if (pageStart.classList.contains('pages__active')) {
+			// console.log(pageStart.id)
+			mainNav.forEach(mNa =>{
+				if (mNa.getAttribute('data-page')==pageStart.id) {
+					mNa.classList.add('main__nav__item__active');	
+				} else {
+					mNa.classList.remove('main__nav__item__active');
+				}
+			})
+		}
+	})
 	
-//   });
+  });
 
 mainNav.forEach(mN => {
 	mN.addEventListener('click', function(){
