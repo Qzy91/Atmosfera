@@ -8604,6 +8604,9 @@ button:hover, button:focus {
 input:hover, input:focus {
   outline: none; }
 
+html {
+  scroll-behavior: auto; }
+
 .global__subtitle {
   font-family: 'Montserrat Alternates';
   font-style: normal;
@@ -8631,6 +8634,9 @@ input:hover, input:focus {
   .global__btn:hover {
     opacity: 0.7;
     color: #fff !important; }
+
+.bold {
+  font-weight: 600; }
 
 .navbar {
   padding-top: 30px;
@@ -8793,8 +8799,24 @@ input:hover, input:focus {
 
 .pages {
   height: auto;
-  padding-bottom: 120px;
   position: relative; }
+  .pages__pading-calculator {
+    padding-top: 90px; }
+  .pages__pading-page {
+    padding: 90px 0; }
+  .pages__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .pages__center__text {
+      font-family: 'Montserrat Alternates';
+      font-style: normal;
+      font-size: 25px;
+      line-height: 30px;
+      color: #171717; }
+    .pages__center__img {
+      padding: 20px 0; }
   .pages__btn {
     text-align: right;
     width: 100%;
@@ -8803,10 +8825,10 @@ input:hover, input:focus {
     justify-content: flex-end;
     align-items: center; }
   .pages__flex {
-    padding-top: 40px;
+    padding: 0 0 40px 0;
     display: flex;
     width: 100%;
-    height: 100%; }
+    height: auto; }
     .pages__flex__info {
       padding-right: 50px;
       width: 50%; }
@@ -8841,6 +8863,7 @@ input:hover, input:focus {
           .pages__flex__info__row__item__text {
             font-style: normal;
             font-weight: normal;
+            text-align: center;
             font-size: 27px;
             line-height: 33px;
             text-align: justify;
@@ -8888,12 +8911,122 @@ input:hover, input:focus {
     .pages__active__opacity {
       opacity: 1 !important;
       transform: translateX(0); }
+  .pages__calculator {
+    display: flex;
+    font-family: 'Montserrat Alternates';
+    justify-content: center; }
+    .pages__calculator__left {
+      width: 590px;
+      height: 100%;
+      padding-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(125.11deg, rgba(85, 137, 188, 0.97) -5.03%, rgba(49, 101, 152, 0.97) 141.95%); }
+      .pages__calculator__left__img {
+        width: 590px;
+        height: auto;
+        padding-top: 50px; }
+        .pages__calculator__left__img img {
+          width: 100%;
+          height: auto; }
+      .pages__calculator__left__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 33px;
+        line-height: 40px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 55px 0; }
+      .pages__calculator__left__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 0 75px 50px 75px; }
+    .pages__calculator__item {
+      width: 100%;
+      padding-left: 50px; }
+      .pages__calculator__item__title {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 41px;
+        color: #000000;
+        padding-bottom: 29px; }
+        .pages__calculator__item__title__arrow {
+          height: 75px;
+          width: auto;
+          padding-right: 35px; }
+          .pages__calculator__item__title__arrow img {
+            width: 100%;
+            height: auto; }
+      .pages__calculator__item__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 30px;
+        color: #171717; }
+      .pages__calculator__item__input {
+        padding: 20px; }
+        .pages__calculator__item__input input {
+          width: 91px;
+          height: 42px;
+          background: #FFFFFF;
+          border: 2px solid #4578AA;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 60px;
+          text-align: center; }
+      .pages__calculator__item__label {
+        padding-left: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 28px;
+        color: #073867; }
+      .pages__calculator__item__input-checkbox {
+        padding: 10px 20px; }
+        .pages__calculator__item__input-checkbox input {
+          width: 45px;
+          height: 44px;
+          background: #FFFFFF;
+          border: 2px solid #497CAD;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 5px; }
+      .pages__calculator__item__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; }
+        .pages__calculator__item__row__btn {
+          padding: 30px 0; }
+          .pages__calculator__item__row__btn button {
+            width: 430px;
+            height: 65px;
+            background: linear-gradient(125.11deg, rgba(85, 137, 188, 0.97) -5.03%, rgba(49, 101, 152, 0.97) 141.95%);
+            border-radius: 92px;
+            border: none;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 28px;
+            text-align: center;
+            color: #FFFFFF; }
+  .pages__logo {
+    position: absolute;
+    right: 0;
+    bottom: 26px;
+    opacity: 0.35; }
 
 .page {
   transition: 0.3s all linear;
   opacity: 0;
-  height: auto !important;
-  padding: 90px 0; }
+  height: auto !important; }
 
 .examples {
   font-family: 'Montserrat Alternates'; }
@@ -8935,7 +9068,11 @@ input:hover, input:focus {
         width: 375px;
         height: 280px;
         overflow: hidden;
-        position: relative; }
+        position: relative;
+        transition: 0.3s all linear; }
+        .examples__flex__item__img:hover {
+          transform: scale(1.05);
+          box-shadow: 4px 4px 8px 6px rgba(34, 60, 80, 0.2); }
         .examples__flex__item__img__text {
           position: absolute;
           width: 100%;
@@ -9012,6 +9149,9 @@ input:hover, input:focus {
         display: flex;
         align-items: center;
         justify-content: center; }
+        .example__main__foto__item:hover img {
+          transform: scale(1.05);
+          box-shadow: 4px 4px 8px 6px rgba(34, 60, 80, 0.2); }
         .example__main__foto__item__flex {
           position: relative;
           width: 100%;
@@ -9029,17 +9169,8 @@ input:hover, input:focus {
             width: 100%;
             height: 100%;
             -o-object-fit: cover;
-               object-fit: cover; }
-          .example__main__foto__item__flex__shadow {
-            top: 0;
-            left: 0;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
+               object-fit: cover;
             transition: 0.3s all linear !important; }
-          .example__main__foto__item__flex:hover .example__main__foto__item__shadow {
-            background: rgba(255, 255, 255, 0.35); }
   .example__posts {
     font-family: 'Montserrat';
     border: 1px solid #CBCBCB;
@@ -9152,7 +9283,7 @@ input:hover, input:focus {
 
 @media screen and (max-width: 4096px) {
   .container {
-    max-width: 1840px !important; }
+    max-width: 1608px !important; }
   .pages .container {
     max-width: 1500px !important; } }
 
@@ -9175,7 +9306,7 @@ input:hover, input:focus {
   .global__btn {
     height: 44px;
     font-size: 20px;
-    line-height: 28px; }
+    line-height: 44px; }
     .global__btn:hover {
       opacity: 0.7; }
   .nav-menu {
@@ -9224,10 +9355,9 @@ input:hover, input:focus {
   .pages {
     padding-bottom: 20px; }
     .pages__flex {
-      padding-top: 40px;
       display: flex;
       width: 100%;
-      height: 100%; }
+      height: auto; }
       .pages__flex__info {
         padding-right: 50px;
         width: 50%; }
@@ -9492,7 +9622,7 @@ input:hover, input:focus {
     max-width: 100% !important; }
   .global__subtitle {
     font-size: 36px;
-    line-height: 43px; }
+    line-height: 36px; }
   .global__btn {
     width: 180px;
     height: 34px;
@@ -9546,3 +9676,224 @@ input:hover, input:focus {
               line-height: 32px;
               color: #00016E;
               padding: 9px 0; } }
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0px; }
+  .global__subtitle {
+    font-size: 36px;
+    line-height: 36px; }
+  .global__btn {
+    height: 36px;
+    font-size: 18px;
+    line-height: 36px; }
+    .global__btn:hover {
+      opacity: 0.7; }
+  .main {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; }
+    .main__nav {
+      width: 100%; }
+      .main__nav__item {
+        width: 20%;
+        margin: 0 1px;
+        height: 60px;
+        font-size: 10px;
+        line-height: 28px; }
+  .pages {
+    padding-bottom: 10px; }
+    .pages__btn {
+      width: 100%;
+      height: auto; }
+    .pages__flex {
+      padding-top: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: auto; }
+      .pages__flex__info {
+        padding: 5px;
+        width: 100%;
+        height: auto; }
+        .pages__flex__info__text {
+          font-size: 16px;
+          line-height: 22px;
+          padding: 10px 0px;
+          text-align: left; }
+        .pages__flex__info__row {
+          width: 100%;
+          padding-top: 20px; }
+          .pages__flex__info__row__item {
+            padding: 5px;
+            width: 33.33%; }
+            .pages__flex__info__row__item__number {
+              font-size: 23px;
+              line-height: 20px; }
+            .pages__flex__info__row__item__text {
+              font-size: 18px;
+              line-height: 23px;
+              text-align: center; }
+        .pages__flex__info__img {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          padding: 3px; }
+          .pages__flex__info__img img {
+            width: 100%;
+            height: auto; }
+        .pages__flex__info__services__item {
+          width: 100%;
+          padding-top: 10px; }
+          .pages__flex__info__services__item__arrow {
+            width: 50px;
+            height: auto; }
+            .pages__flex__info__services__item__arrow img {
+              width: 100%;
+              height: auto; }
+          .pages__flex__info__services__item__info {
+            width: 100%;
+            padding: 10px 0 0 5px; }
+            .pages__flex__info__services__item__info__text {
+              width: 100%;
+              font-size: 16px;
+              line-height: 22px;
+              padding: 9px 0; }
+            .pages__flex__info__services__item__info__row {
+              width: 100%; }
+  .page {
+    padding: 20px 0; }
+  .examples__back {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 18px; }
+  .examples__title {
+    font-size: 36px;
+    line-height: 40px;
+    padding: 35px 0 6px; }
+  .examples__flex {
+    width: 100%; }
+    .examples__flex__item {
+      width: 100%;
+      margin: 20px 0 10px; }
+      .examples__flex__item__img {
+        width: 100%;
+        height: auto; }
+      .examples__flex__item__title {
+        width: 95%;
+        margin: 9px 0;
+        font-size: 18px;
+        line-height: 22px; }
+      .examples__flex__item__text {
+        width: 95%;
+        font-size: 16px;
+        line-height: 20px; }
+  .example {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+    .example__arrow {
+      display: none; }
+    .example .global__subtitle {
+      padding-bottom: 25px;
+      text-align: left;
+      width: 100%; }
+    .example__main {
+      padding: 0 10px; }
+      .example__main__text {
+        font-size: 16px;
+        line-height: 20px; }
+      .example__main__foto {
+        width: 100%;
+        flex-wrap: wrap;
+        padding-top: 30px; }
+        .example__main__foto__item {
+          width: 100%;
+          height: auto; }
+          .example__main__foto__item:hover img {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 8px 6px rgba(34, 60, 80, 0.2); }
+          .example__main__foto__item__flex {
+            position: relative;
+            width: 100%;
+            min-width: none;
+            max-width: 300px;
+            height: auto;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .example__main__foto__item__flex__foto {
+              width: 100%;
+              height: 100%; }
+            .example__main__foto__item__flex img {
+              width: 100%;
+              height: 100%;
+              -o-object-fit: cover;
+                 object-fit: cover;
+              transition: 0.3s all linear !important; }
+    .example__posts {
+      max-width: 305px;
+      height: auto;
+      padding: 15px 8px; }
+      .example__posts__title {
+        padding-bottom: 25px;
+        font-size: 18px;
+        line-height: 22px; }
+      .example__posts__list__item {
+        display: flex; }
+        .example__posts__list__item__foto {
+          width: 96px;
+          height: 85px; }
+          .example__posts__list__item__foto img {
+            width: 100%;
+            height: auto; }
+        .example__posts__list__item__text {
+          padding: 6px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: #073867; }
+  .footer {
+    width: 100%;
+    height: auto; }
+    .footer__info {
+      align-items: center;
+      width: 100%;
+      padding: 20px 0; }
+      .footer__info__text {
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 14px; }
+      .footer__info__logo {
+        padding-top: 20px;
+        width: 300px;
+        height: auto; }
+    .footer__form {
+      position: static;
+      width: 100%;
+      height: auto;
+      padding: 20px 0; }
+      .footer__form__input input {
+        max-width: 300px;
+        height: 62px;
+        margin: 8px 0;
+        font-size: 18px;
+        line-height: 26px; }
+      .footer__form__btn {
+        margin: 8px 0;
+        font-size: 18px;
+        line-height: 24px;
+        width: 300px;
+        height: 62px;
+        background: #424241;
+        border-radius: 3px; }
+        .footer__form__btn:hover {
+          opacity: 0.85; } }

@@ -21419,6 +21419,7 @@ const data = [
     }
 ]
 
+
 const examples = document.querySelector('.examples__flex');
 if (examples != null){
 data.map((el) => {
@@ -21444,7 +21445,6 @@ if (exampleMain != null){
 			return exWork
 		}
 	});
-	console.log(example[0].moreImage);
 	
 	document.querySelector('.example__main').insertAdjacentHTML(`beforeend`, `
 
@@ -21457,7 +21457,7 @@ if (exampleMain != null){
 			`<div href="${foto}" class="example__main__foto__item">
 				<div class="example__main__foto__item__flex">
 					<div class="example__main__foto__item__flex__foto"><img src="${foto}" alt=""></div>
-					<div class="example__main__foto__item__shadow"></div>
+					 <div class="example__main__foto__item__shadow"></div>
 				</div>
 			</div>`)
 		})}
@@ -21481,7 +21481,6 @@ if (exampleMain != null){
 	})
 	
 
-// })
 }
 
 const [...arrExamples] = document.querySelectorAll('.examples__flex__item')
@@ -21493,7 +21492,6 @@ for (let example of arrExamples) {
 
 $(document).ready(function(){
 	$('input[name="phone"]').mask('+38(099) 999-9999')
-	// $('.input[name="phoneHead"]').mask('+38(099) 999-9999')
 });
 
 const tooltip = document.querySelector('.tooltip');
@@ -21510,7 +21508,6 @@ const pageSection = document.querySelector('.pages');
 document.addEventListener("DOMContentLoaded", () => {
     Pages.forEach( pageStart =>{
 		if (pageStart.classList.contains('pages__active')) {
-			// console.log(pageStart.id)
 			mainNav.forEach(mNa =>{
 				if (mNa.getAttribute('data-page')==pageStart.id) {
 					mNa.classList.add('main__nav__item__active');	
@@ -21533,13 +21530,11 @@ mainNav.forEach(mN => {
 			}
 		})
 		Pages.forEach(page =>{
-			// console.log(page);
 			if (page.id == mN.getAttribute('data-page')) {
 				page.classList.remove('pages__not-active');
 				window.setTimeout(() =>{page.classList.remove('pages__not-active__opacity')}, 5);
 				page.classList.add('pages__active');
 				window.setTimeout(() =>{page.classList.add('pages__active__opacity')}, 5);
-				// pageSection.style.height = getComputedStyle(page).height;
 
 			} else {
 				page.classList.remove('pages__active');
@@ -21548,26 +21543,15 @@ mainNav.forEach(mN => {
 				window.setTimeout(() =>{page.classList.add('pages__not-active__opacity')}, 5); 
 			}
 		})
-		// document.getElementById('company').classList.add('pages__display-none');
-		// document.getElementById('services').classList.remove('pages__display-none');
 	});
 });
-// window.document.documentElement.scrollTop = mainSection.clientHeight;
-// // console.log(mainSection.style.clientHeight);
-// wormFloor.forEach(floor => {
-// 	floor.addEventListener('mousemove', function(e){
-// 	floor.classList.add('')
-// 	});
-// });
 
+if ((window.location.pathname != '/') & (window.location.pathname != '/index.html')){
+	window.document.documentElement.scrollTop = mainSection.clientHeight;
+}
 service.forEach(serv => {
-	// serv.addEventListener('click', function(){
-	// 	alert(this.dataset.title);
-	// });
-
 
 	serv.addEventListener('mousemove', function(e){
-		// console.log(document.documentElement.scrollTop)
 		tooltipText.innerText = this.dataset.title;
 		tooltip.style.top = (e.y +20 + window.pageYOffset) + 'px';
 		tooltip.style.left = (e.x + 5) + 'px';
@@ -21583,13 +21567,6 @@ service.forEach(serv => {
 
 	});
 });
-// mapWraper.addEventListener('mousemove', function(){
-// 	tooltip.style.opacity = 0;
-// })
-
-// jQuery(document).ready(($)=>{
-// 	$('example__main__foto').lightGallery();
-// })
 
 lightGallery(document.getElementById('example__main__foto'), {
 	speed: 500
