@@ -8613,7 +8613,9 @@ html {
   font-weight: 600;
   font-size: 60px;
   line-height: 73px;
-  color: #1F5C96; }
+  color: #1F5C96;
+  padding-bottom: 40px;
+  padding-left: 48px; }
 
 .global__btn {
   background: linear-gradient(125.11deg, rgba(85, 137, 188, 0.97) -5.03%, rgba(49, 101, 152, 0.97) 141.95%);
@@ -8702,8 +8704,8 @@ html {
       font-size: 23px;
       line-height: 28px;
       text-align: center;
-      color: #F9F9F9;
-      background: linear-gradient(180deg, rgba(165, 197, 227, 0.63) 0%, rgba(148, 179, 208, 0.63) 39.58%, rgba(118, 144, 171, 0.63) 100%);
+      color: #585353;
+      background: linear-gradient(180deg, #FCFDFF 0%, #F1FAFF 48.96%, #DFE5ED 100%);
       box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       transition: 0.3s all linear !important; }
@@ -8714,12 +8716,15 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #F9F9F9; }
+        color: #585353; }
         .main__nav__item .mainnav :hover {
-          color: #F9F9F9; }
+          color: #585353; }
       .main__nav__item__active {
         background: linear-gradient(125.11deg, rgba(85, 137, 188, 0.97) -5.03%, rgba(49, 101, 152, 0.97) 141.95%);
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3); }
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        color: #F9F9F9 !important; }
+        .main__nav__item__active:hover {
+          color: #F9F9F9 !important; }
       .main__nav__item:hover {
         background: linear-gradient(180deg, rgba(124, 166, 242, 0.6) 0%, rgba(98, 142, 222, 0.6) 39.58%, rgba(62, 106, 181, 0.6) 100%);
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3); }
@@ -8804,6 +8809,8 @@ html {
     padding-top: 90px; }
   .pages__pading-page {
     padding: 90px 0; }
+  .pages__pading-cost {
+    padding: 50px; }
   .pages__center {
     display: flex;
     align-items: center;
@@ -8837,8 +8844,8 @@ html {
         font-style: normal;
         font-weight: normal;
         text-align: justify;
-        font-size: 21px;
-        line-height: 26px;
+        font-size: 23px;
+        line-height: 28px;
         color: #073867; }
       .pages__flex__info__row {
         display: flex;
@@ -8863,22 +8870,28 @@ html {
           .pages__flex__info__row__item__text {
             font-style: normal;
             font-weight: normal;
-            text-align: center;
+            text-align: center !important;
             font-size: 27px;
             line-height: 33px;
             text-align: justify;
             color: #000000; }
       .pages__flex__info__img {
-        width: 824px;
+        width: 100%;
+        max-width: 824px;
         height: auto;
-        overflow: hidden; }
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
         .pages__flex__info__img__flex {
           display: flex;
           align-items: center;
           justify-content: center; }
-        .pages__flex__info__img img {
-          width: 100%;
-          height: auto; }
+        .pages__flex__info__img__box {
+          max-width: 824px; }
+          .pages__flex__info__img__box img {
+            width: 90%;
+            height: auto; }
       .pages__flex__info__services__item {
         width: 100%;
         padding-top: 30px;
@@ -8914,14 +8927,13 @@ html {
   .pages__calculator {
     display: flex;
     font-family: 'Montserrat Alternates';
-    justify-content: center; }
+    justify-content: center;
+    height: 100%; }
     .pages__calculator__left {
       width: 590px;
-      height: 100%;
       padding-bottom: 70px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       background: linear-gradient(125.11deg, rgba(85, 137, 188, 0.97) -5.03%, rgba(49, 101, 152, 0.97) 141.95%); }
       .pages__calculator__left__img {
@@ -8983,14 +8995,19 @@ html {
           border-radius: 60px;
           text-align: center; }
       .pages__calculator__item__label {
-        padding-left: 10px;
         font-style: normal;
         font-weight: normal;
         font-size: 23px;
-        line-height: 28px;
-        color: #073867; }
+        line-height: 25px;
+        color: #073867;
+        display: flex;
+        align-items: center; }
+        .pages__calculator__item__label span {
+          padding-left: 10px; }
       .pages__calculator__item__input-checkbox {
-        padding: 10px 20px; }
+        margin: 10px 20px;
+        display: flex;
+        align-items: center; }
         .pages__calculator__item__input-checkbox input {
           width: 45px;
           height: 44px;
@@ -8998,6 +9015,20 @@ html {
           border: 2px solid #497CAD;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 5px; }
+      .pages__calculator__item__radio {
+        display: flex;
+        align-items: center;
+        border-radius: 50%; }
+        .pages__calculator__item__radio__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px 50px 20px 30px; }
+          .pages__calculator__item__radio__item input {
+            width: 45px;
+            height: 45px;
+            background: #FFFFFF;
+            border: 2px solid #497CAD; }
       .pages__calculator__item__row {
         display: flex;
         align-items: center;
@@ -9017,6 +9048,75 @@ html {
             line-height: 28px;
             text-align: center;
             color: #FFFFFF; }
+    .pages__calculator__result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: auto; }
+      .pages__calculator__result__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        text-align: center;
+        color: #171717;
+        padding-bottom: 50px; }
+      .pages__calculator__result__price {
+        display: inline-block;
+        width: 142px;
+        height: 42px;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 42px;
+        background: #FFFFFF;
+        border: 2px solid #4578AA;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 60px; }
+      .pages__calculator__result__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+        color: #171717;
+        padding-bottom: 25px; }
+      .pages__calculator__result__form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        .pages__calculator__result__form__input input {
+          width: 430px;
+          height: 54px;
+          background: #FFFFFF;
+          border: 1px solid #4275A7;
+          box-sizing: border-box;
+          border-radius: 5px;
+          text-align: center;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 22px;
+          line-height: 27px;
+          text-align: center;
+          color: #787878;
+          margin: 1px; }
+        .pages__calculator__result__form__btn {
+          width: 430px;
+          height: 79px;
+          background: linear-gradient(125.11deg, rgba(85, 137, 188, 0.97) -5.03%, rgba(49, 101, 152, 0.97) 141.95%);
+          border-radius: 5px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 23px;
+          line-height: 28px;
+          text-align: center;
+          color: #FFFFFF;
+          border: none; }
+          .pages__calculator__result__form__btn:hover {
+            opacity: 0.85; }
   .pages__logo {
     position: absolute;
     right: 0;
@@ -9123,6 +9223,16 @@ html {
     padding-bottom: 25px;
     text-align: left;
     width: 100%; }
+  .example__price {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 78px;
+    text-align: justify;
+    color: #FF4601;
+    word-wrap: normal;
+    padding-bottom: 30px; }
   .example__main {
     display: flex;
     align-items: center;
@@ -9171,6 +9281,16 @@ html {
             -o-object-fit: cover;
                object-fit: cover;
             transition: 0.3s all linear !important; }
+          .example__main__foto__item__flex__shadow {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            transition: 0.3s all linear !important; }
+          .example__main__foto__item__flex:hover .example__main__foto__item__shadow {
+            transform: scale(1.05); }
   .example__posts {
     font-family: 'Montserrat';
     border: 1px solid #CBCBCB;

@@ -21392,7 +21392,7 @@ const data = [
         description: 'Дом 260м2 расположен в селе Безрадичи киевской области В котором был разработан инженерный проект на системы вентиляции и кондиционирования в последующем нами был успешно реализована, Система кондиционирования которая включала в себе  мультисплит систему через внутренние блоки канального исполнения. Вентиляционная установки включает в себя приточно-вытяжную функцию к ней установили пред и пост нагревательный элемент а именно калорифер на 3квт, во избежание обмерзания вент оборудования Вся система воздуховода использовалась из оцинкованной  стали и обесшумленная под монтаж линейних диффузоров скрытого типа Системы вентиляции и кондиционеров были собраны на оборудовании бренда Daikin. Который в последующем был взят на постгарантийное обслуживание. Автоматизация данных систем была интегрированная в систему «умный дом»',
         image: './img/works1.png',
         moreImage: ['./img/works1.png', './img/works1-2.jpg','./img/works1-3.jpg'],
-        price: '125 000',
+        price: '20500$',
         area: 'Дом 120 м2'
     },
     {
@@ -21403,7 +21403,7 @@ const data = [
         description: 'Реализован  монтаж системы отопления теплый пол, систему водоснабжения канализации',
         image: './img/works1.png',
         moreImage: [],
-        price: '125 000',
+        price: '20500$',
         area: 'Дом 120 м2'
     },
     {
@@ -21414,7 +21414,7 @@ const data = [
         description: 'Реализован  монтаж системы отопления теплый пол, систему водоснабжения канализации',
         image: './img/works1.png',
         moreImage: [],
-        price: '125 000',
+        price: '20500$',
         area: 'Дом 120 м2'
     }
 ]
@@ -21464,11 +21464,18 @@ if (exampleMain != null){
 		</div>
 	</div>
 	`)
+
+	document.querySelector('.example__info').insertAdjacentHTML(`afterBegin`, `
+
+	<div class="example__price">${example[0].price}</div>
+	
+	`)
 	
 	data.map((elPosts) => {
 		if (elPosts.id != id){
 		document.querySelector('.example__posts__list').insertAdjacentHTML(`beforeend`, `
 		<a href="#" >
+			
 			<div class="example__posts__list__item">
 				
 				<div class="example__posts__list__item__foto"><img src="${elPosts.image}" alt=""></div>
@@ -21548,6 +21555,7 @@ mainNav.forEach(mN => {
 
 if ((window.location.pathname != '/') & (window.location.pathname != '/index.html')){
 	window.document.documentElement.scrollTop = mainSection.clientHeight;
+	// console.log(window.document.documentElement.scrollTop)
 }
 service.forEach(serv => {
 
