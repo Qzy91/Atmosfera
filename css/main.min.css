@@ -8759,11 +8759,7 @@ html {
     box-shadow: 0 0 10 rgba(50, 94, 197, 0.6);
     opacity: 0.9 !important; }
 
-.warm_floor:hover + .warm_floorr {
-  box-shadow: 0 0 10 rgba(50, 94, 1, 0.6);
-  opacity: 0.9 !important; }
-
-.warm_floor:hover + .warm_floorrr {
+.warm_floor:hover ~ .warm_floor {
   box-shadow: 0 0 10 rgba(50, 94, 1, 0.6);
   opacity: 0.9 !important; }
 
@@ -8803,6 +8799,7 @@ html {
     z-index: 3; }
 
 .pages {
+  font-family: 'Montserrat Alternates';
   height: auto;
   position: relative; }
   .pages__pading-calculator {
@@ -8817,7 +8814,6 @@ html {
     justify-content: center;
     flex-direction: column; }
     .pages__center__text {
-      font-family: 'Montserrat Alternates';
       font-style: normal;
       font-size: 25px;
       line-height: 30px;
@@ -8839,20 +8835,56 @@ html {
     .pages__flex__info {
       padding-right: 50px;
       width: 50%; }
+      .pages__flex__info__subtitle {
+        padding-left: 30px;
+        padding-bottom: 20px;
+        font-style: normal;
+        font-weight: 600;
+        text-align: left;
+        font-size: 33px;
+        line-height: 40px;
+        letter-spacing: 0.06em;
+        -webkit-text-decoration-line: underline;
+                text-decoration-line: underline;
+        text-transform: uppercase;
+        color: #124B66;
+        text-shadow: 2px 2px 2px #F9F9F9; }
       .pages__flex__info__text {
-        font-family: 'Montserrat Alternates';
         font-style: normal;
         font-weight: normal;
         text-align: justify;
         font-size: 23px;
         line-height: 28px;
         color: #073867; }
+        .pages__flex__info__text__bold {
+          font-weight: 500; }
       .pages__flex__info__row {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         width: 100%;
-        padding-top: 70px; }
+        padding-top: 50px; }
+        .pages__flex__info__row__cost {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 100%; }
+          .pages__flex__info__row__cost__btn button {
+            background: linear-gradient(125.11deg, rgba(85, 137, 188, 0.97) -5.03%, rgba(49, 101, 152, 0.97) 141.95%);
+            border-radius: 4px;
+            border: none;
+            width: 331px;
+            height: 82px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 28px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 0 20px;
+            padding: 14px 11px; }
+            .pages__flex__info__row__cost__btn button:hover {
+              opacity: 0.85; }
         .pages__flex__info__row__item {
           width: 33.33%;
           display: flex;
@@ -9148,7 +9180,7 @@ html {
     line-height: 61px;
     color: #1F5C96;
     width: 100%;
-    padding: 90px 0 6px;
+    padding: 60px 0 6px;
     text-align: center; }
   .examples__flex {
     display: flex;
